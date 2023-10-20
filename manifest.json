@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Alpha extension",
+  "description": "Verba-Group alpha bank extension",
+  "version": "1.0.0",
+  "icons": { "120": "icons/apple-touch-icon-120x120.png" },
+  "content_scripts": [
+    {
+      "matches": ["https://alfabank.ru/*", "https://anketa.alfabank.ru/*"],
+      "js": ["index.js"]
+    }
+  ]
+}
