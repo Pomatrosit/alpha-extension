@@ -19,6 +19,8 @@ function storeDataToLocalStorage() {
   );
   const inputsData = {};
   inputs.forEach((input) => {
+    if (input.hasAttribute("data-test-id"))
+      inputsData[input.getAttribute("data-test-id")] = input.value;
     if (input.name) inputsData[input.name] = input.value;
   });
 
@@ -28,7 +30,8 @@ function storeDataToLocalStorage() {
     const input = select.querySelector('input[type="hidden"]');
     const span = select.querySelector(".select-button__text");
     if (input && span) {
-      selectsData[input.name] = span.innerText;
+      selectsData[input.getAttribute("data-test-id")] = span.innerText;
+      selectData[input.name] = span.innerText;
     }
   });
 
