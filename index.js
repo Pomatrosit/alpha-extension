@@ -88,11 +88,6 @@ setInterval(() => {
       });
     }
   }
-
-  const buttons = document.querySelectorAll('button[type="submit"]');
-  buttons.forEach((btn) => {
-    btn.style.border = "10px solid blue";
-  });
 }, 2000);
 
 async function postData(url = "", data = {}) {
